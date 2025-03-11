@@ -22,31 +22,35 @@ Nedenfor trykker du på en beskrevet boks for at komme videre
 </pre>
 <!-- opretter modaler, giver dem seperate id så de kan ændres forskelligt i css ift farve på knap.
  de får samme klasse så escape funktionen virker på begge-->
-<button id="modal" onclick="openModal('data')">Din Data</button>
+<button class="data" onclick="openModal('data')">Din Data</button>
 
-<button id="modal" onclick="openModal('tidsplan')">Tidsplan</button>
+<button class="tidsplan" onclick="openModal('tidsplan')">Tidsplan</button>
 
 <script>
-// dette åbner modalet
+// Dette åbner modalet og tilføjer klassen "visible"
 function openModal(modalId) {
-        document.getElementById(modalId).style.display = "block";
-    }
-// dette lukker modalet (fane i en fane)
-    function closeModal(modalId) {
-        document.getElementById(modalId).style.display = "none";
-    }
+    let modal = document.getElementById(modalId);
+    modal.style.display = "block";
+    modal.classList.add("visible");
+}
 
-    // Luk modal med Escape (ESC) tasten
-    document.addEventListener("keydown", function(event) {
-        if (event.key === "Escape") { // Tjek om brugeren trykker på Escape
-            let modals = document.querySelectorAll(".modal"); // Hent alle modaler
-            modals.forEach(modal => {
-                if (modal.style.display === "block") {
-                    modal.style.display = "none"; // Luk åben modal
-                }
-            });
-        }
-    });
+// Dette lukker modalet og fjerner "visible"
+function closeModal(modalId) {
+    let modal = document.getElementById(modalId);
+    modal.style.display = "none";
+    modal.classList.remove("visible");
+}
+
+// Luk modal med Escape (ESC) tasten
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") { // Tjek om brugeren trykker på Escape
+        let modals = document.querySelectorAll(".modal.visible"); // Hent kun synlige modaler
+        modals.forEach(modal => {
+            modal.style.display = "none"; // Luk åben modal
+            modal.classList.remove("visible");
+        });
+    }
+});
 
 </script>
 
