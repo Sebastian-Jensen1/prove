@@ -33,6 +33,19 @@ function openModal(modalId) {
     function closeModal(modalId) {
         document.getElementById(modalId).style.display = "none";
     }
+
+    // Luk modal med Escape (ESC) tasten
+    document.addEventListener("keydown", function(event) {
+        if (event.key === "Escape") { // Tjek om brugeren trykker på Escape
+            let modals = document.querySelectorAll(".modal"); // Hent alle modaler
+            modals.forEach(modal => {
+                if (modal.style.display === "block") {
+                    modal.style.display = "none"; // Luk åben modal
+                }
+            });
+        }
+    });
+    
 </script>
 
 <div id="data" class="modal">

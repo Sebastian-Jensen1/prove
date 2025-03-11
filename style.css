@@ -56,8 +56,8 @@ button.tidsplan:hover {
 
 .close {
     position: absolute;
-    top: 10px;  /* Adjusted to be closer to the top */
-    right: 15px; /* Adjusted to be closer to the right */
+    top: 5px;  /* Adjusted to be closer to the top */
+    right: 5px; /* Adjusted to be closer to the right */
     font-size: 40px; /* Increased size */
     font-weight: bold;
     color: black; /* Change color if needed */
