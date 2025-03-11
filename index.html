@@ -15,21 +15,22 @@
 <h1> AlzheimerOrganizer</h1>   
 <hr> <br>
 <pre>
-Velkommen tilbage Jens Jensen!    1 2 
+Velkommen tilbage Jens Jensen!  
 Nedenfor trykker du på en beskrevet boks for at komme videre
 <hr> <br>
 
 </pre>
-
-<button id="data" class="modal" onclick="openModal('data')">Din Data</button>
-<button id="tidsplan" class="modal" onclick="openModal('tidsplan')">Tidsplan</button>
+<!-- opretter modaler, giver dem seperate id så de kan ændres forskelligt i css ift farve på knap.
+ de får samme klasse så escape funktionen virker på begge-->
+<button class="modal" onclick="openModal('data')">Din Data</button>
+<button class="modal" onclick="openModal('tidsplan')">Tidsplan</button>
 
 <script>
-
+// dette åbner modalet
 function openModal(modalId) {
         document.getElementById(modalId).style.display = "block";
     }
-
+// dette lukker modalet (fane i en fane)
     function closeModal(modalId) {
         document.getElementById(modalId).style.display = "none";
     }
