@@ -5,7 +5,7 @@ h1 {
   }
 
   button {
-    font-size: 500px; /* Større tekst */
+    font-size: 50px; /* Større tekst */
     padding: 25px 40px; /* Mere plads inde i knappen */
     background-color: #007bff; /* Blå baggrund */
     color: white; /* Hvid tekst */
@@ -33,7 +33,8 @@ button:hover {
     margin: 10% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 90%;
+    width: 80%;
+    height: 80%;
     max-width: 1000px;
     text-align: center;
     position: relative;
