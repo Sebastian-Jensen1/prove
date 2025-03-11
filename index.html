@@ -19,10 +19,24 @@ Velkommen tilbage Jens Jensen!
 Nedenfor trykker du på en beskrevet boks for at komme videre
 </pre>
 
-<button onclick="window.open('./din_data')">Din Data </button>
+<button onclick="openModal()">Din Data</button>
 <script>
-  
+    
+  function openModal() {
+        document.getElementById("modal").style.display = "block";
+    }
+
+    function closeModal() {
+        document.getElementById("modal").style.display = "none";
+    }
 </script>
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <iframe src="./din_data" width="100%" height="300px" frameborder="0"></iframe>
+    </div>
+</div>
 
 </body>
 

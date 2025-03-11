@@ -1,5 +1,46 @@
 h1 {
-    color:beige; 
-    background-color: blue, red;
-    
+    color:rgb(0, 0, 0); 
+    background-color:rgb(34, 208, 191); 
   }
+
+  button {
+    font-size: 20px; /* Større tekst */
+    padding: 15px 30px; /* Mere plads inde i knappen */
+    background-color: #007bff; /* Blå baggrund */
+    color: white; /* Hvid tekst */
+    border: none; /* Fjern kant */
+    border-radius: 10px; /* Runde hjørner */
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0056b3; /* Mørkere blå når man holder musen over */
+}
+
+  .modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    text-align: center;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
