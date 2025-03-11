@@ -1,20 +1,34 @@
 
 h1 {
-    color:rgba(52, 239, 27, 0.491); 
+    color:black; 
     background-color:rgb(241, 247, 247); 
   }
 
-  button {
+  /* Standard knap-styling */
+button {
     font-size: 50px; /* Større tekst */
-    padding: 15px 20px; /* Mere plads inde i knappen */
-    background-color: #007bff; /* Blå baggrund */
+    padding: 15px 20px;
     color: white; /* Hvid tekst */
-    border: none; /* Fjern kant */
-    border-radius: 10px; /* Runde hjørner */
+    border: none;
+    border-radius: 10px;
     cursor: pointer;
 }
-button:hover {
-    background-color: #2d71bb; /* Mørkere blå når man holder musen over */
+
+/* Unikke farver til hver knap */
+.btn-data {
+    background-color: #007bff; /* Blå */
+}
+
+.btn-data:hover {
+    background-color: #2d71bb; /* Mørkere blå */
+}
+
+.btn-tidsplan {
+    background-color: #28a745; /* Grøn */
+}
+
+.btn-tidsplan:hover {
+    background-color: #218838; /* Mørkere grøn */
 }
 
   .modal {

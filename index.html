@@ -17,24 +17,35 @@
 <pre>
 Velkommen tilbage Jens Jensen!    1
 Nedenfor trykker du på en beskrevet boks for at komme videre
+<hr> <br>
+
 </pre>
 
-<button onclick="openModal()">Din Data</button>
+<button onclick="openModal('data')">Din Data</button>
+<button onclick="openModal('tidsplan')">Tidsplan</button>
+
 <script>
 
-  function openModal() {
-        document.getElementById("modal").style.display = "block";
+function openModal(modalId) {
+        document.getElementById(modalId).style.display = "block";
     }
 
-    function closeModal() {
-        document.getElementById("modal").style.display = "none";
+    function closeModal(modalId) {
+        document.getElementById(modalId).style.display = "none";
     }
 </script>
 
-<div id="modal" class="modal">
+<div id="modal1" class="modal">
     <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <iframe src="./din_data" width="100%" height="300px" frameborder="0"></iframe>
+        <span class="close" onclick="closeModal('modal1')">&times;</span>
+        <iframe src="./din_data.html" width="100%" height="300px" frameborder="0"></iframe>
+    </div>
+</div>
+
+<div id="modal2" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal2')">&times;</span>
+        <iframe src="./tidsplan.html" width="100%" height="300px" frameborder="0"></iframe>
     </div>
 </div>
 
