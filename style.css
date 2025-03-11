@@ -5,8 +5,8 @@ h1 {
   }
 
   button {
-    font-size: 40px; /* Større tekst */
-    padding: 15px 30px; /* Mere plads inde i knappen */
+    font-size: 100px; /* Større tekst */
+    padding: 25px 40px; /* Mere plads inde i knappen */
     background-color: #007bff; /* Blå baggrund */
     color: white; /* Hvid tekst */
     border: none; /* Fjern kant */
